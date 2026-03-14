@@ -1,0 +1,25 @@
+.token-preview {
+  display: block;
+  margin-top: 8px;
+}
+
+.tp-select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  font-weight: 600;
+}
+
+.tp-input {
+  width: 90px;
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  text-align: right;
+}
+
+@media (max-width: 640px) {
+  .tp-input { width: 72px; }
+  .tp-select { padding: 6px 8px; }
+}

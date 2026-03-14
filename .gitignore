@@ -1,0 +1,70 @@
+# ─── Secrets ─────────────────────────────────────────────────────────────────
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+*.cert
+secrets/
+
+# ─── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+.Python
+*.pyc
+venv/
+env/
+.venv/
+.env/
+inferxspace/
+pip-wheel-metadata/
+
+# ─── Data / Database ─────────────────────────────────────────────────────────
+*.db
+*.sqlite
+*.sqlite3
+backend/data/
+data/
+
+# ─── Node / Frontend ─────────────────────────────────────────────────────────
+node_modules/
+.npm
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+dist/
+.cache/
+.parcel-cache/
+
+# ─── Vite ────────────────────────────────────────────────────────────────────
+frontend/dist/
+frontend/.vite/
+
+# ─── IDE ─────────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ─── Docker ───────────────────────────────────────────────────────────────────
+docker-compose.override.yml
+
+# ─── Alembic ────────────────────────────────────────────────────────────────
+backend/alembic/versions/*.pyc
+
+# ─── Test artifacts ───────────────────────────────────────────────────────────
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml

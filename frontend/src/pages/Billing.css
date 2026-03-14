@@ -1,0 +1,112 @@
+/* ── Billing Page ── */
+
+/* Invoice List */
+.ix-invoice-list { display: flex; flex-direction: column; }
+
+.ix-invoice {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+}
+
+.ix-invoice:last-child { border-bottom: none; }
+
+.ix-invoice__icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.ix-invoice__info { flex: 1; display: flex; flex-direction: column; gap: 2px; }
+.ix-invoice__id { font-size: 13px; font-weight: 600; }
+.ix-invoice__date { font-size: 11px; color: var(--text-secondary); }
+.ix-invoice__amount { font-size: 14px; font-weight: 600; margin-right: 12px; }
+
+/* ── Billing Page (bl-) ── */
+.bl-tabs {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border-light);
+  padding-bottom: 0;
+}
+
+.bl-tab {
+  background: none;
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.bl-tab:hover { color: var(--text-primary); }
+.bl-tab--active { color: var(--primary); border-bottom-color: var(--primary); }
+
+.bl-tab__count {
+  background: var(--background);
+  padding: 1px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.bl-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 24px;
+  text-align: center;
+  color: var(--text-tertiary);
+}
+
+.bl-empty p { font-size: 16px; font-weight: 600; color: var(--text-secondary); margin: 12px 0 4px; }
+.bl-empty span { font-size: 13px; }
+
+.bl-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid var(--border-light);
+}
+
+.bl-pagination__info { font-size: 13px; color: var(--text-secondary); }
+.bl-desc { max-width: 250px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 12px; color: var(--text-tertiary); }
+
+.ix-text--green { color: var(--success) !important; }
+.ix-text--red { color: var(--error) !important; }
+
+.ix-badge--usage {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--primary);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.ix-badge--info {
+  background: rgba(99, 102, 241, 0.08);
+  color: var(--text-secondary);
+  border: 1px solid var(--border-light);
+}
+
+.ix-badge--pending {
+  background: rgba(245, 158, 11, 0.1);
+  color: var(--warning);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}

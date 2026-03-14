@@ -1,0 +1,155 @@
+/* Markdown Content Styles */
+.markdown-content {
+  width: 100%;
+  line-height: 1.6;
+  font-size: 13.5px;
+}
+
+.markdown-text {
+  margin-bottom: 8px;
+}
+
+.markdown-paragraph {
+  margin-bottom: 6px;
+  color: inherit;
+  line-height: 1.6;
+}
+
+.markdown-heading {
+  font-weight: 600;
+  color: inherit;
+  margin: 14px 0 8px;
+  line-height: 1.3;
+}
+
+.markdown-h1 {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.markdown-h2 {
+  font-size: 19px;
+  font-weight: 700;
+}
+
+.markdown-h3 {
+  font-size: 17px;
+}
+
+.markdown-h4 {
+  font-size: 15px;
+}
+
+.markdown-h5 {
+  font-size: 14px;
+}
+
+.markdown-h6 {
+  font-size: 13px;
+}
+
+.markdown-list-item {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 5px;
+  color: inherit;
+  line-height: 1.5;
+  padding-left: 4px;
+}
+
+.markdown-list-marker {
+  color: var(--primary);
+  font-weight: 600;
+  flex-shrink: 0;
+  font-size: 14px;
+}
+
+.markdown-inline-code {
+  background: color-mix(in srgb, var(--primary) 10%, var(--surface));
+  border: 1px solid color-mix(in srgb, var(--primary) 20%, transparent);
+  color: inherit;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace;
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.markdown-code-block {
+  margin: 14px 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--text-primary) 3%, var(--surface));
+}
+
+.markdown-code-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px;
+  background: color-mix(in srgb, var(--text-primary) 5%, var(--surface));
+  border-bottom: 1px solid var(--border);
+}
+
+.markdown-code-language {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.markdown-code-copy {
+  padding: 4px 10px;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.markdown-code-copy:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  background: color-mix(in srgb, var(--primary) 8%, var(--surface));
+}
+
+.markdown-code-block pre {
+  margin: 0;
+  padding: 14px;
+  overflow-x: auto;
+  background: transparent;
+}
+
+.markdown-code-block code {
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', 'Consolas', 'Courier New', monospace;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: inherit;
+  display: block;
+  white-space: pre;
+  word-wrap: normal;
+  word-break: normal;
+}
+
+/* Scrollbar for code blocks */
+.markdown-code-block pre::-webkit-scrollbar {
+  height: 8px;
+}
+
+.markdown-code-block pre::-webkit-scrollbar-track {
+  background: color-mix(in srgb, var(--text-primary) 5%, var(--surface));
+}
+
+.markdown-code-block pre::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--text-primary) 15%, var(--surface));
+  border-radius: 4px;
+}
+
+.markdown-code-block pre::-webkit-scrollbar-thumb:hover {
+  background: color-mix(in srgb, var(--text-primary) 25%, var(--surface));
+}

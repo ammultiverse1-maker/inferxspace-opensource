@@ -1,0 +1,45 @@
+version: "3.9"
+
+services:
+  # ── Backend ──────────────────────────────────────────────────────────────
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./backend/data:/app/data          # persistent SQLite DB + vector DBs
+    env_file:
+      - .env
+    environment:
+      - DATABASE_URL=sqlite+aiosqlite:///./data/inferx.db
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - redis
+    restart: unless-stopped
+
+  # ── Frontend ─────────────────────────────────────────────────────────────
+  frontend:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./frontend:/app
+    ports:
+      - "5173:5173"
+    environment:
+      - VITE_API_URL=http://localhost:8000
+    command: sh -c "npm install && npm run dev -- --host"
+    restart: unless-stopped
+
+  # ── Redis (optional but recommended for rate limiting & caching) ─────────
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:

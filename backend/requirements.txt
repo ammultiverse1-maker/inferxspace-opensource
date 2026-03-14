@@ -1,0 +1,56 @@
+# InferX BYOK Backend — Python dependencies
+
+# ── Web framework ──────────────────────────────────────────────────────────
+fastapi==0.115.5
+uvicorn[standard]==0.32.1
+python-multipart==0.0.12
+
+# ── Database ───────────────────────────────────────────────────────────────
+sqlalchemy[asyncio]==2.0.36
+aiosqlite==0.20.0         # SQLite (default, zero-config)
+alembic==1.14.0
+# Uncomment for PostgreSQL:
+# asyncpg==0.29.0
+# psycopg2-binary==2.9.9
+
+# ── Auth & Security ────────────────────────────────────────────────────────
+python-jose[cryptography]==3.3.0
+passlib[bcrypt]==1.7.4
+cryptography==43.0.3
+pydantic[email]==2.9.2
+pydantic-settings==2.6.1
+email-validator==2.2.0
+
+# ── HTTP client (OAuth + provider calls) ──────────────────────────────────
+httpx==0.27.2
+
+# ── Caching (optional but recommended) ────────────────────────────────────
+redis==5.2.0
+
+# ── OpenAI SDK (used by BYOK provider for OpenAI + compatible APIs) ───────
+openai==1.54.4
+anthropic==0.40.0
+google-generativeai==0.8.3
+groq==0.12.0
+mistralai==1.2.0
+
+# ── RAG / Vector search ────────────────────────────────────────────────────
+chromadb==0.5.18
+sentence-transformers==3.3.1
+langchain==0.3.8
+langchain-community==0.3.8
+pypdf==5.1.0
+python-docx==1.1.2
+unstructured==0.16.7
+
+# ── MCP (Model Context Protocol) ──────────────────────────────────────────
+mcp==1.1.0
+
+# ── Utilities ─────────────────────────────────────────────────────────────
+python-dateutil==2.9.0
+pytz==2024.2
+
+# ── Payment integration (NOT included — add your own) ─────────────────────
+# Stripe:
+# stripe==10.12.0
+# LemonSqueezy uses plain httpx (no SDK needed)
