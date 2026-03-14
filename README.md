@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="frontend/public/logo.png" alt="InferXSpace Logo" width="80" />
+  <img src="https://inferx.space/assets/logo-white-DDzi8NVg.svg" alt="InferXSpace Logo" width="80" />
   <br/>InferXSpace
 </h1>
 
